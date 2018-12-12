@@ -1,10 +1,7 @@
 BootStrap: debootstrap
 OSVersion: xenial
 MirrorURL: http://us.archive.ubuntu.com/ubuntu/
- 
-%files
-    #someLocalFile /opt/
- 
+
 %post
  
     echo "deb http://nova.clouds.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" | tee -a /etc/apt/sources.list
@@ -28,7 +25,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     echo "deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse" | tee -a /etc/apt/sources.list
     echo "deb-src http://security.ubuntu.com/ubuntu xenial-security universe" | tee -a /etc/apt/sources.list
  
-    # make sure everything is uptodate
     apt-get -y update
     apt-get -y upgrade
     apt-get install -y curl wget tar gzip gcc build-essential zlib1g-dev
@@ -43,5 +39,3 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 % environment 
   export PATH=/software/bsmap-2.90:$PATH
  
-# mkdir <relative path>
-# wget -O <relative path>/<thing to download.zip> http://URL
