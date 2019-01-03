@@ -26,7 +26,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     echo "deb-src http://security.ubuntu.com/ubuntu xenial-security universe" | tee -a /etc/apt/sources.list
  
     apt-get -y update
-    apt-get install -y curl wget tar gzip gcc build-essential zlib1g-dev
+    apt-get install -y curl wget tar gzip gcc build-essential zlib1g-dev python-minimal
     wget -O bsmap-2.90.tgz http://lilab.research.bcm.edu/dldcc-web/lilab/yxi/bsmap/bsmap-2.90.tgz
     mkdir software
     tar -xvzf bsmap-2.90.tgz
